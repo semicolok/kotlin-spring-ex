@@ -2,16 +2,15 @@ package com.example.kotlinspringex.repository.user
 
 import java.time.LocalDateTime
 import java.util.*
-import javax.persistence.Column
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.Id
+import javax.persistence.*
 
 @Entity
+@Table(name = "USER")
 data class User(
 
         @Id
         @GeneratedValue
+        @Column(name = "USER_ID", nullable = false)
         var userId: UUID?,
 
         @Column(name = "NAME", nullable = false)
