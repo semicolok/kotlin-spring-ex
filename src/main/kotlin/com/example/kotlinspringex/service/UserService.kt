@@ -1,8 +1,8 @@
 package com.example.kotlinspringex.service
 
 import com.example.kotlinspringex.contoller.dto.UserResponseDto
-import com.example.kotlinspringex.repository.UserMapper
-import com.example.kotlinspringex.repository.UserRepository
+import com.example.kotlinspringex.repository.user.UserMapper
+import com.example.kotlinspringex.repository.user.UserRepository
 import org.springframework.stereotype.Service
 import java.util.*
 

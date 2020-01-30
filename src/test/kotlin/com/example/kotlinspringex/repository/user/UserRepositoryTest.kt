@@ -1,4 +1,4 @@
-package com.example.kotlinspringex.repository
+package com.example.kotlinspringex.repository.user
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Assertions.assertEquals
@@ -14,22 +14,22 @@ class UserRepositoryTest @Autowired constructor(
 
     @Test
     fun `When findById then return User`() {
-        val jungu = User(userId = null, name = "Jungu", email = "semicolok@gmail.com")
-        entityManager.persist(jungu)
+        val testUser = User(userId = null, name = "testUser", email = "testuser@gmail.com")
+        entityManager.persist(testUser)
         entityManager.flush()
-        val user = userRepository.getOne(jungu.userId!!)
+        val user = userRepository.getOne(testUser.userId!!)
 
-        assertThat(user).isEqualTo(jungu)
+        assertThat(user).isEqualTo(testUser)
     }
 
     @Test
     fun `When findByName then return User`() {
-        val jungu = User(userId = null, name = "Jungu", email = "semicolok@gmail.com")
-        entityManager.persist(jungu)
+        val testUser = User(userId = null, name = "testUser01", email = "testuser@gmail.com")
+        entityManager.persist(testUser)
         entityManager.flush()
-        val users = userRepository.findByName(jungu.name)
+        val users = userRepository.findByName(testUser.name)
 
         assertEquals(1, users.count())
-        assertThat(users).containsExactlyInAnyOrder(jungu)
+        assertThat(users).containsExactlyInAnyOrder(testUser)
     }
 }

@@ -1,4 +1,4 @@
-package com.example.kotlinspringex.repository
+package com.example.kotlinspringex.repository.user
 
 import java.time.LocalDateTime
 import java.util.*

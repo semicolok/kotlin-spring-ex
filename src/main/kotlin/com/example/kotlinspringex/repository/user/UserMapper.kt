@@ -1,4 +1,4 @@
-package com.example.kotlinspringex.repository
+package com.example.kotlinspringex.repository.user
 
 import com.example.kotlinspringex.contoller.dto.UserResponseDto
 import org.mapstruct.IterableMapping

@@ -18,7 +18,7 @@ class UserServiceTest : StringSpec() {
 
     init {
         "When getUsers then return 2 size list" {
-            userService!!.getUsers() shouldHaveSize 2
+            userService!!.getUsers() shouldHaveSize 4
         }
 
         "When getUserById then return User" {
